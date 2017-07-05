@@ -11,6 +11,8 @@ libraryDependencies ++= Seq(
   guice,
   "com.typesafe.play" %% "play-slick" % "3.0.0",
 
+  jdbc % Test,
+  "com.h2database" % "h2" % "1.4.192" % Test,
   "org.scalatestplus.play" %% "scalatestplus-play" % "3.0.0" % Test
 )
 
