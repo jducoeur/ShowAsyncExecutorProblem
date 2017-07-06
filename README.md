@@ -12,7 +12,7 @@ What we know for sure: if you --
 * Inside the block for `withRouter()`, you try to do Slick's `db.run()`
 * Slick consistently crashes.
 
-You can repro the issue by setting up this repo, compiling and running `test`. There are two tests in `ShowProblemSpec.scala`, with identical (trivial) Slick code -- one without `withRouter()`, which succeeds, and one with it, which crashes.
+You can repro the issue by cloning this repo, compiling and running `test`. There are two tests in `ShowProblemSpec.scala`, with identical (trivial) Slick code -- one without `withRouter()`, which succeeds, and one with it, which crashes.
 
 ### Why it matters
 
