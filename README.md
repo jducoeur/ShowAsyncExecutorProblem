@@ -58,7 +58,7 @@ java.lang.IllegalStateException: Cannot initialize ExecutionContext; AsyncExecut
         at slick.jdbc.JdbcBackend$DatabaseDef.run(JdbcBackend.scala:38)
         ... user-land code, calling db.run()
 ```
-I have no idea why the trace is different in this reduced reproducer; my best guess is that this is using an H2 in-memory DB (to make it easier to set up and run), whereas the real code is using the PostgresProfile.
+I have no idea why the trace is different in this reduced reproducer; my best guess is that it is because this is using an H2 in-memory DB (to make it easier to set up and run), whereas the real code is using the PostgresProfile.
 
 ### What's Going On?
 
