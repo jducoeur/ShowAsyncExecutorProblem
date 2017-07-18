@@ -3,6 +3,10 @@ Reproducible test case for a problem I've hit with Slick and Play unit-testing
 
 This repo demonstrates an apparent problem with a specific combination of test functions, which result in some sort of inconsistent state that crashes Slick.
 
+### The Issue and the Solution
+
+This was used as the reproducer for [Play Issue #7581](https://github.com/playframework/playframework/issues/7581). See the discussion there for the details. The summary is that `withRouter()` shuts down the existing Application, putting things into a bad state, and that the workaround is to set the config value `play.allowGlobalApplication` to `false`. (So that there is no previous Application to break.)
+
 ### The Problem, and how to Repro
 
 What we know for sure: if you --
